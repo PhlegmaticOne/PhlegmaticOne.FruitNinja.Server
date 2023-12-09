@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 using PhlegmaticOne.FruitNinja.Server.Log;
-using PhlegmaticOne.FruitNinja.Server.Messages.GameData;
+using PhlegmaticOne.FruitNinja.Server.Messages.EndGame;
 using PhlegmaticOne.FruitNinja.Server.Messages.Sync;
 using PhlegmaticOne.FruitNinja.Shared;
 
@@ -134,7 +134,7 @@ public class GameSession : IGameSession
     {
         var messageBytes = message[new Range(new Index(start), new Index(0, true))];
         var messageJson = Encoding.UTF8.GetString(messageBytes);
-        return JsonConvert.DeserializeObject<T>(messageJson);
+        return JsonConvert.DeserializeObject<T>(messageJson)!;
     }
 
     private static bool IsMessageOfType(ArraySegment<byte> message, byte[] messageType)

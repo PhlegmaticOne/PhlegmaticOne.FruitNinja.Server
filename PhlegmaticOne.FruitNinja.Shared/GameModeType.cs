@@ -4,6 +4,7 @@
     {
         ByScore,
         ByTime,
-        ByBlocks
+        ByBlocks,
+        ByLifes
     }
 }

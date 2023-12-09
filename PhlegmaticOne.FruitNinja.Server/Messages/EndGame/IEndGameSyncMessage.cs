@@ -1,6 +1,6 @@
 ﻿using PhlegmaticOne.FruitNinja.Shared;
 
-namespace PhlegmaticOne.FruitNinja.Server.Messages.GameData
+namespace PhlegmaticOne.FruitNinja.Server.Messages.EndGame
 {
     public interface IEndGameSyncMessage
     {
